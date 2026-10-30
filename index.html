@@ -141,7 +141,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .numbers{background:var(--night);color:var(--on-night)}
 .numbers .kicker{color:var(--sun)}
 .numbers .lede{color:var(--on-night-soft)}
-.num-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px}
 @media (max-width:900px){.num-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.num-grid{grid-template-columns:1fr}}
 .n{display:grid;gap:8px;align-content:start;border-top:3px solid var(--red);padding-top:18px}
@@ -444,8 +444,6 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
       <div class="num-grid">
         <div class="n"><span class="flag">Deutschland</span><span class="big">28,7 %</span><p>der Menschen in Alleinerziehenden-Haushalten sind armutsgefährdet. Im Schnitt der Bevölkerung sind es 16,1 %.</p><span class="src">Destatis, EU-SILC 2025</span></div>
         <div class="n"><span class="flag">Österreich</span><span class="big">43 %</span><p>der Alleinerziehenden und ihrer Kinder sind armuts- oder ausgrenzungsgefährdet. Im Schnitt sind es 17 %.</p><span class="src">EU-SILC 2024, zit. n. Armutskonferenz</span></div>
-        <div class="n"><span class="flag">Österreich</span><span class="big">141.000</span><p>Mütter ziehen ihre Kinder alleine groß. Bei rund 86 von 100 Ein-Eltern-Familien ist es die Mutter.</p><span class="src">Statistik Austria 2024, zit. n. Armutskonferenz</span></div>
-        <div class="n"><span class="flag">Österreich</span><span class="big">1 von 3</span><p>Kindern von Alleinerziehenden bekommt laut Befragung keinen Unterhalt vom anderen Elternteil.</p><span class="src">Unterhaltsbefragung 2021, zit. n. Armutskonferenz</span></div>
       </div>
     </div>
   </section>
@@ -634,25 +632,6 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
     </div>
   </section>
 
-  <!-- 6 EIN DIENSTAG -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="kicker">Ein ganz normaler Dienstag</span>
-        <h2>Ein Tag, an dem alles an einer Person hängt.</h2>
-      </div>
-      <div class="day-grid">
-        <div class="slot"><time>6:05</time><p>Brotdose packen, die letzte Banane fürs Kind. Für sich selbst nur Kaffee.</p></div>
-        <div class="slot"><time>7:20</time><p>Kita, Schule, Stau. Die Tankanzeige leuchtet seit gestern.</p></div>
-        <div class="slot"><time>12:30</time><p>Nachricht aus der Schule: 35 € für den Ausflug bis Freitag. <em>Irgendwie.</em></p></div>
-        <div class="slot"><time>16:45</time><p>Einkauf. Am Kühlregal wird zurückgelegt, was nicht unbedingt sein muss.</p></div>
-        <div class="slot"><time>19:30</time><p>Hausaufgaben, Abendbrot, Vorlesen. Lächeln, auch wenn der Kopf voll ist.</p></div>
-        <div class="slot last"><time>21:40</time><p>Kontoauszug und Taschenrechner. <em>Für ihn mach ich das alles.</em></p></div>
-      </div>
-      <p class="small-note" style="margin-top:16px">Ein Beispiel, wie es vielen alleinerziehenden Müttern geht.</p>
-    </div>
-  </section>
-
   <!-- 7 WIRKUNG -->
   <section class="sec impact-sec" id="wirkung">
     <div class="wrap">
@@ -665,9 +644,6 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
         <article class="card"><span class="cat">Bildung</span><span class="amt">35 €</span><p class="hand">Zum ersten Mal mit auf den Schulausflug. Abends hat er nicht aufgehört zu erzählen.</p></article>
         <article class="card"><span class="cat">Einkauf</span><span class="amt">60 €</span><p class="hand">Ein voller Kühlschrank am Monatsende. Pfannkuchen am Sonntag, einfach so.</p></article>
         <article class="card"><span class="cat">Mobilität</span><span class="amt">50 €</span><p class="hand">Ein Monat ohne Tankangst. Pünktlich zur Arbeit, pünktlich zur Kita.</p></article>
-        <article class="card"><span class="cat">Freude</span><span class="amt">40 €</span><p class="hand">Das Fahrrad, das sie sich gewünscht hat. Gebraucht, mit neuer Klingel und perfekt.</p></article>
-        <article class="card"><span class="cat">Bildung</span><span class="amt">120 €</span><p class="hand">Zehn Stunden Mathe-Nachhilfe. Aus „Ich kann das nicht" wird „Ich schaff das".</p></article>
-        <article class="card"><span class="cat">Notfälle</span><span class="amt">70 €</span><p class="hand">Neue Winterstiefel und eine warme Jacke. Endlich nicht mehr frieren auf dem Schulweg.</p></article>
       </div>
     </div>
   </section>
@@ -690,10 +666,7 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
       </div>
       <div class="promises">
         <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg><h3>Jeder Euro mit Beleg</h3><p>Jede Ausgabe wird mit Kassenbon oder Rechnung dokumentiert.</p></div>
-        <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><h3>Regelmäßiger Bericht</h3><p>Wir veröffentlichen, wie viel eingegangen ist, wie vielen Familien wir geholfen haben und wofür.</p></div>
         <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><h3>Sachhilfe statt Bargeld</h3><p>Hilfe kommt als Einkauf, Gutschein oder direkt bezahlte Rechnung an.</p></div>
-        <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><h3>Persönlich geprüft</h3><p>Wir sprechen mit jeder Mutter, bevor wir helfen. Vertraulich und ohne Papierkrieg.</p></div>
-        <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Privatsphäre geschützt</h3><p>Namen und Fotos von Familien nur mit ausdrücklicher Erlaubnis.</p></div>
         <div class="pr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><h3>Kosten offen gelegt</h3><p>Gebühren für Zahlungsdienste oder Verwaltung weisen wir offen aus.</p></div>
       </div>
       <div class="flow">
@@ -702,13 +675,7 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
           <span style="flex:3;background:#3E8A55">Einkauf</span><span style="flex:2.5;background:#2F639F">Bildung</span><span style="flex:2;background:#B7791F">Mobilität</span><span style="flex:1.5;background:#C24D73">Freude</span><span style="flex:1;background:#6E5E9A">Pause &amp; Notfälle</span><span style="flex:1;background:#6B7480">Kosten</span>
         </div>
         <div class="legend"><span><i style="background:#3E8A55"></i>Einkauf</span><span><i style="background:#2F639F"></i>Bildung</span><span><i style="background:#B7791F"></i>Mobilität</span><span><i style="background:#C24D73"></i>Freude</span><span><i style="background:#6E5E9A"></i>Atempause &amp; Notfälle</span><span><i style="background:#6B7480"></i>Zahlungs- &amp; Verwaltungskosten</span></div>
-        <p class="small-note"><span class="ph">Platzhalter:</span> Die Aufteilung ist nur ein Muster. Nach dem ersten Bericht stehen hier eure echten Zahlen mit Datum.</p>
-      </div>
-      <div class="counter">
-        <div><b>[ Anzahl ]</b><span>Familien unterstützt</span></div>
-        <div><b>[ Betrag ]</b><span>direkt weitergegeben</span></div>
-        <div><b>[ Anzahl ]</b><span>monatliche Unterstützer</span></div>
-        <p class="small-note"><span class="ph">Platzhalter:</span> Erst eintragen, wenn die Zahlen feststehen. Bis dahin lieber weglassen als schätzen.</p>
+        <p class="small-note"><span class="ph">Platzhalter:</span> Die Aufteilung ist ein Muster. Der Anteil für Gebühren und Organisation wird mit dem Partnerverein festgelegt und steht dann hier als feste Prozentzahl.</p>
       </div>
     </div>
   </section>
@@ -739,10 +706,8 @@ footer{background:var(--night);color:var(--on-night-soft);border-top:1px solid v
       <div class="faq-list">
         <details><summary>Kommt meine Spende wirklich bei den Müttern an?</summary><p>Ja. Wir helfen mit Einkäufen, Gutscheinen oder direkt bezahlten Rechnungen und dokumentieren jede Ausgabe mit Beleg. Im regelmäßigen Bericht kannst du nachlesen, wofür das Geld eingesetzt wurde.</p></details>
         <details><summary>Bekomme ich eine Spendenquittung?</summary><p><span class="ph">Platzhalter:</span> Hier steht, ob ihr als gemeinnützig anerkannt seid und Zuwendungsbestätigungen ausstellen dürft. Nur dann ist die Spende steuerlich absetzbar.</p></details>
-        <details><summary>Kann ich auch aus Österreich spenden?</summary><p>Ja, per SEPA-Überweisung oder über den Spendenlink. Wir unterstützen Mütter in Deutschland und in Österreich.</p></details>
         <details><summary>Wie kündige ich meine monatliche Spende?</summary><p>Jederzeit und ohne Begründung. Ein Klick im Spendenportal oder eine kurze Nachricht an uns reicht. Einen Dauerauftrag beendest du einfach bei deiner Bank.</p></details>
         <details><summary>Wie entscheidet ihr, wer Hilfe bekommt?</summary><p>Mütter melden sich bei uns oder werden uns von Kitas, Schulen und Beratungsstellen empfohlen. Wir führen mit jeder ein persönliches Gespräch und schauen gemeinsam, was gerade am dringendsten ist.</p></details>
-        <details><summary>Wird mein Name veröffentlicht?</summary><p>Nein, nur wenn du das ausdrücklich möchtest. Deine Daten nutzen wir ausschließlich für die Abwicklung deiner Spende.</p></details>
       </div>
     </div>
   </section>
